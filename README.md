@@ -27,7 +27,6 @@ Binaries only; the source code is not published.
 - **Check the sound** — one click tells you whether the processing actually
   reaches the speakers for a given application, instead of guessing
 - Russian and English interface, global bypass hotkey, start with Windows
-- Optional per-site equalizer in the browser through the bundled extension
 
 ## Install
 
@@ -36,6 +35,9 @@ Windows 10 (2004 or newer) or Windows 11, x64. Administrator rights required.
 1. Unpack the archive anywhere.
 2. Run as administrator: `BEQ.exe --install`
 3. Start `BEQ.exe`.
+
+To update an existing installation, exit BEQ from the tray and replace
+`BEQ.exe` in place. Profiles and presets are stored in `C:\ProgramData\BEQ`.
 
 The installer registers the audio processing object, attaches it to your
 current output device and restarts the Windows audio service — sound stops for
@@ -49,7 +51,7 @@ SmartScreen reacts to:
 
 > right-click the ZIP → Properties → tick **Unblock** → OK → then unpack
 
-or `Unblock-File -Path .\BEQ-1.0.0-beta-win-x64.zip` in PowerShell. Unpack
+or `Unblock-File -Path .\BEQ-1.0.1-beta-win-x64.zip` in PowerShell. Unpack
 first and every extracted file inherits the mark instead.
 
 Antivirus heuristics may also get nervous, because the app is unsigned, asks for
@@ -82,7 +84,6 @@ check what you downloaded.
   microphones do not offer.
 - No automatic gain compensation: boosting bands can clip loud material, and
   the mixer warns when a curve peaks above 0 dB.
-- Site rules cannot work on DRM video or cross-origin media without CORS.
 
 Beta. It changes system audio settings — read the release notes before
 installing.
